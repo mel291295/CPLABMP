@@ -15,6 +15,6 @@ st.write(weatherData['main']['temp_max'])
 import streamlit as st
 location = st.radio("How is the weather in",('London', 'Rome', 'Munich'))
 if location == 'London':
-     st.write('The weather in is')
- else:
-     st.write(" ")
+     st.write('The weather in" location "is" weatherData)
+else:
+     st.write("The weather in " location "is" weatherData)
