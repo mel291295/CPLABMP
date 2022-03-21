@@ -1,13 +1,15 @@
 import streamlit as st
 import json, requests 
 
+st.header("OpenWeather")
+
 APIkey = "7b3f6e505b459240312ab53b78c72e8b"
-location= input("Gimmi a city")
+location= st.text("Gimmi a city")
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
-#print(url)
+st.text(url)
 
 
 # Download the JSON data from OpenWeatherMap.org's API.
