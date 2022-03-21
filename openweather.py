@@ -4,7 +4,8 @@ import json, requests
 st.header("OpenWeather")
 
 APIkey = "7b3f6e505b459240312ab53b78c72e8b"
-location= st.text("Gimmi a city")
+location= st.text_input("Gimmi a city", "london")
+
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
