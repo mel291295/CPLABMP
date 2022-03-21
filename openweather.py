@@ -10,19 +10,19 @@ location= st.text_input("Gimmi a city", "london")
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
-st.text(url)
+print(url)
 
 
 # Download the JSON data from OpenWeatherMap.org's API.
 response = requests.get(url)  
 # Uncomment to see the raw JSON text:
-st.text(response.text)  
+print (response.text)  
 
 #Load JSON data into a Python variable.
 weatherData = json.loads(response.text)
-# Uncomment to see the raw JSON text:
-st.text(weatherData) 
-#from pprint import pprint 
+
+print(weatherData) 
+
 
 maxtemp = weatherData["main"]["temp_max"]
 pprint(weatherData)  
