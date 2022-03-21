@@ -21,10 +21,9 @@ print (response.text)
 #Load JSON data into a Python variable.
 weatherData = json.loads(response.text)
 
-print(weatherData) 
+maxtemp = weatherData["main" = 0]["temp_max"]
+st.text(weatherData)
 
-
-maxtemp = weatherData["main"]["temp_max"]
-pprint(weatherData)  
+st.text(st.input(weatherDAta, 0, description)
 
 
