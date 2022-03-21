@@ -1,4 +1,4 @@
-import streamlit as st
+
 import json, requests 
 
 st.header("OpenWeather")
@@ -8,11 +8,13 @@ location= st.text_input("Gimmi a city", "london")
 
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 print(url)
+response = requests.get(url) 
+weatherData = st.text(json.loads(response.text)) 
+st.write(weatherData['main']['temp_max'])
 
-city = st.radio("Gimmi a location",('London', 'Roma', 'Munich'))
-if city == 'London':
-     st.write('You selected London.')
+import streamlit as st
+location = st.radio("How is the weather in",('London', 'Rome', 'Munich'))
+if location == 'London':
+     st.write('The weather in is')
  else:
-     st.write("You didn't select London.")
-
-
+     st.write(" ")
