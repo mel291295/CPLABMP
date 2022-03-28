@@ -6,7 +6,7 @@ choice = st.selectbox(
   "What you want to know? ",
   ("Synonyms", "Antonyms", "Sounds like", "Means like"))
 
-st.write("Your selected: " choice)
+st.write("Your selected: ", choice)
 
 if choice == "Synonyms":
   url= 'https://www.datamuse.com/api/words?rel_syn=' + keyword + '&max=10'
