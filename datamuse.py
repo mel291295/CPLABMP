@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.header("Datamuse")
 keyword = st.text_input('plz give me a keyword: ', "word")
 
 choice = st.selectbox(
@@ -10,7 +11,7 @@ st.write("Your selected: ", choice)
 
 if choice == "Synonyms":
   url= 'https://www.datamuse.com/api/words?rel_syn=' + keyword + '&max=10'
-  elif choice == "Antonyms" :
+  elif choice == "Antonyms":
     url= 'https://www.datamuse.com/api/words?rel_ant=' + keyword + '&max=10'
     elif choice == "Sounds like":
       url= 'https://www.datamuse.com/api/words?sl=' + keyword + '&max=10'
