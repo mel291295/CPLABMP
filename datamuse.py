@@ -33,6 +33,8 @@ dataFromDatamuse3 = json.loads(response3.text)
 dataFromDatamuse4 = json.loads(response4.text)
 pprint(dataFromDatamuse1)
 pprint(dataFromDatamuse2)
+pprint(dataFromDatamuse3)
+pprint(dataFromDatamuse4)
 
 st.text("you give me the word ", keyword, ". Its synonym are as following: ")
 for eachentry in dataFromDatamuse1:
