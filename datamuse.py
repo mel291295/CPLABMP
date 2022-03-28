@@ -12,6 +12,6 @@ if choice == "Antonyms" :
   st.write("You selected antonyms of " + keyword)
 if choice == "Sounds like":
   st.write ("You selected sounds like of " + keyword)
-if choice == ("You selected synonyms of " + keyword)
+if choice == "Means like":
   st.write("You selected means like " + keyword)
 
