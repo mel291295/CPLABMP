@@ -11,11 +11,11 @@ st.write("Your selected: ", choice)
 
 if choice == "Synonyms":
   url= 'https://www.datamuse.com/api/words?rel_syn=' + keyword + '&max=10'
-  elif choice == "Antonyms":
+  elif == "Antonyms":
     url= 'https://www.datamuse.com/api/words?rel_ant=' + keyword + '&max=10'
-    elif choice == "Sounds like":
+    elif == "Sounds like":
       url= 'https://www.datamuse.com/api/words?sl=' + keyword + '&max=10'
-      else choice == "Means like":
+      else == "Means like":
         url= 'https://www.datamuse.com/api/words?ml=' + keyword + '&max=10'
   
 
